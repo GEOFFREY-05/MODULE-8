@@ -26,11 +26,31 @@ To write a Python program to:
 ---
 
 ## 💻  Program
+n = int(input("Enter the number of students: "))<br>
+students = []<br>
 
-Add Code Here
+# Read student names and grades<br>
+for _ in range(n):<br>
+    name = input("Enter student's name: ")<br>
+    grade = float(input("Enter student's grade: "))<br>
+    students.append([name, grade])<br>
+
+# Extract and sort the grades<br>
+grades = sorted(set([student[1] for student in students]))<br>
+
+# Identify the second lowest grade<br>
+second_lowest_grade = grades[1]<br>
+
+# Collect names of students with the second lowest grade<br>
+second_lowest_students = sorted([student[0] for student in students if student[1] == second_lowest_grade])<br>
+
+# Print the sorted names<br>
+for name in second_lowest_students:<br>
+    print(name)<br>
 
 ## Output
+<img width="346" height="411" alt="image" src="https://github.com/user-attachments/assets/6d55fa84-77eb-4d68-8cf8-dc759336fb27" />
 
 ## Result
 
-
+Thus,the program is executed successfully
